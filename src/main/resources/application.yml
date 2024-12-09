@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: dBClient
+      password: 123secret
+      database: container-db
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: MqUser
+    password: mqsecret123
+    template:
+      exchange: terminalcontainersmanipulationservice.containers
+      routing-key: all.recipients

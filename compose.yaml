@@ -1,0 +1,16 @@
+services:
+  mongodb:
+    image: 'mongo:latest'
+    environment:
+      - 'MONGO_INITDB_DATABASE=container-db'
+      - 'MONGO_INITDB_ROOT_PASSWORD=123secret'
+      - 'MONGO_INITDB_ROOT_USERNAME=dBClient'
+    ports:
+      - "27017:27017"
+  rabbitmq:
+    image: 'rabbitmq:latest'
+    environment:
+      - 'RABBITMQ_DEFAULT_PASS=mqsecret123'
+      - 'RABBITMQ_DEFAULT_USER=MqUser'
+    ports:
+      - "5672:5672"
